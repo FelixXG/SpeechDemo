@@ -1,4 +1,4 @@
-package com.flightmanager.speechdemo;
+package com.felix.speechdemo;
 import android.content.Context;
 
 import com.iflytek.cloud.ErrorCode;

@@ -1,4 +1,4 @@
-package com.flightmanager.speechdemo;
+package com.felix.speechdemo;
 
 
 public interface SetRecogitionProgressView {

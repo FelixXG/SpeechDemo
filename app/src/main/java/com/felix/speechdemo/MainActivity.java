@@ -1,4 +1,4 @@
-package com.flightmanager.speechdemo;
+package com.felix.speechdemo;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.flightmanager.speechdemo.Model.SpeechFlightInfo;
+import com.felix.speechdemo.Model.SpeechFlightInfo;
 import com.google.gson.Gson;
 import com.iflytek.cloud.ErrorCode;
 import com.iflytek.cloud.InitListener;

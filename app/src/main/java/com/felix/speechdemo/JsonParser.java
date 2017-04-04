@@ -1,4 +1,4 @@
-package com.flightmanager.speechdemo;
+package com.felix.speechdemo;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

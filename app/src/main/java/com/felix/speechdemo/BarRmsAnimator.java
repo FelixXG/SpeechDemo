@@ -1,4 +1,4 @@
-package com.flightmanager.speechdemo;
+package com.felix.speechdemo;
 
 import android.util.Log;
 import android.view.animation.AccelerateInterpolator;

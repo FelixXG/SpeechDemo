@@ -1,4 +1,4 @@
-package com.flightmanager.speechdemo;
+package com.felix.speechdemo;
 
 import java.util.ArrayList;
 import java.util.List;

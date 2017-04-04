@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.flightmanager.speechdemo;
+package com.felix.speechdemo;
 
 public interface BarParamsAnimator {
     void start();

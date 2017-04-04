@@ -1,4 +1,4 @@
-package com.flightmanager.speechdemo.Model;
+package com.felix.speechdemo.Model;
 
 
 import android.os.Parcel;

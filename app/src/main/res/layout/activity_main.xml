@@ -30,7 +30,7 @@
             android:text="skip"
             />
     </LinearLayout>
-    <com.flightmanager.speechdemo.RecognitionProgressView
+    <com.felix.speechdemo.RecognitionProgressView
         android:id="@+id/recognition_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
