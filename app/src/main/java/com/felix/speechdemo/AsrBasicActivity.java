@@ -56,7 +56,7 @@ public class AsrBasicActivity extends AppCompatActivity {
         //初始化组件   后期修改为，程序一进入的时候进行初始化
         mToast = Toast.makeText(AsrBasicActivity.this,"",Toast.LENGTH_SHORT);
         mCloudGrammar = FucUtil.readFile(this,"grammar_sample.abnf","utf-8");
-        //initGrammar();
+        initGrammar();
     }
 
     @Override
