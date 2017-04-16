@@ -14,6 +14,10 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * 柱形动画,随着音量的大小变化,可以动态这只柱形的颜色和个数
+ */
 public class RecognitionProgressView extends View {
     public static final int BARS_COUNT = 5;
 
@@ -43,6 +47,7 @@ public class RecognitionProgressView extends View {
     private int barColor = -1;
     private int[] barColors;
     private int[] barMaxHeights;
+    private int[] barInitHeights;
 
     public RecognitionProgressView(Context context) {
         super(context);
@@ -112,12 +117,14 @@ public class RecognitionProgressView extends View {
 
     private void initBars(){
         final List<Integer>heights=initBarHeight();
-        int firstCirclePosition=getMeasuredWidth()/2-
-                2*spacing-
-                4*radius;
+        int firstCirclePosition1=(int)this.getX()+2*spacing;
+//        int firstCirclePosition=getMeasuredWidth()/2-
+//                2*spacing-
+//                4*radius;
         for(int i=0;i<BARS_COUNT;i++){
-            int x=firstCirclePosition+(2*radius+spacing)*i;
-            RecognitionBar bar=new RecognitionBar(x,getMeasuredHeight()/2,2*radius,heights.get(i),radius);
+            int x=firstCirclePosition1+(2*radius+spacing)*i;
+            RecognitionBar bar=new RecognitionBar(x,getMeasuredHeight()/2,barInitHeights[i],heights.get(i),radius);
+            Log.v("xgfmeasureheight","measureheight="+getMeasuredHeight());
             recognitionBars.add(bar);
         }
 
@@ -152,6 +159,21 @@ public class RecognitionProgressView extends View {
             }
         }else{
             System.arraycopy(colors,0,barColors,0,BARS_COUNT);
+        }
+    }
+
+
+    public void setBarInitHeights(int [] heights){
+        if(heights==null) return;
+
+        barInitHeights=new int[BARS_COUNT];
+        if(heights.length<BARS_COUNT){
+            System.arraycopy(heights,0,barInitHeights,0,heights.length);//全部赋值为0
+            for(int i=heights.length;i<BARS_COUNT;i++){
+                barInitHeights[i]=heights[0];
+            }
+        }else{
+            System.arraycopy(heights,0,barInitHeights,0,BARS_COUNT);
         }
     }
 
