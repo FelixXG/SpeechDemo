@@ -21,14 +21,16 @@
             android:id="@+id/btn_voice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="点击录音"
+            android:text="点击开始语义理解"
             />
         <Button
             android:id="@+id/btn_skip"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="skip"
+            android:layout_marginTop="20dp"
+            android:text="跳转到语音听写界面"
             />
+
     </LinearLayout>
     <com.felix.speechdemo.RecognitionProgressView
         android:id="@+id/recognition_view"
