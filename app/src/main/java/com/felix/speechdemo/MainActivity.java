@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button mBtnSkip;
 
-
     private RecognitionProgressView mRecognitionProgressView;
 
     public static final String PRIVATE_SETTING="com.iflytek.setting";           //缓存数据的名称
@@ -104,8 +103,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         int[] heights={60,76,58,80,55};
 
+        int[] initHeightMid={80,120,160,120,80};
+
         mRecognitionProgressView.setColors(colors);
         mRecognitionProgressView.setBarMaxHeightsInDp(heights);
+        mRecognitionProgressView.setBarInitHeights(initHeightMid);
 
 
 
